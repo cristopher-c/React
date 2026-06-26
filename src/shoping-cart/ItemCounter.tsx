@@ -1,4 +1,4 @@
-import React, { type CSSProperties } from 'react'
+import React, { useState, type CSSProperties } from 'react'
 
 interface Props{
   productName     : string
@@ -15,16 +15,29 @@ const counterButtoms:CSSProperties = {
 }
 
 const ItemCounter = ( {productName:name, productQuantity:cant = 0}: Props) => {
+  const [count, setCount] = useState(10);
+
+  const addNumber = () => {
+    setCount(count + 1);
+  }
+
+  const subsNumber = () => {
+    setCount(count - 1);
+  }
+
   return (
     <>
-
       <div
         style={counterButtoms}
       >
         <span>{name}</span>
-        <button>-1</button>
-        <span>{cant}</span>
-        <button>+1</button>
+        <button
+          onClick={subsNumber}
+        >-1</button>
+        <span>{count}</span>
+        <button
+          onClick={addNumber}
+        >+1</button>
       </div>
     </>
   )
