@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 export function MyAwesomeApp(){
 
   const firstName = 'Cristopher';
@@ -5,10 +7,17 @@ export function MyAwesomeApp(){
 
   const family = ['Jeremy', 'Dana', 'Pato', 'Harry'];
 
+  const styleFisrtName: CSSProperties = { 
+    backgroundColor: 'red',
+    borderRadius: 20
+    }
   return(
     <>
-      <div>{firstName} Con variable.</div>
-      <br />
+      <div
+        style={styleFisrtName}
+      >
+        {firstName} Con variable.
+      </div>
       <p>{lastName} Con variable.</p>
 
       <div>
