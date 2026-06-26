@@ -8,15 +8,31 @@ const bodyItemCounter:CSSProperties = {
   padding:15
 }
 
+interface productsInt {
+    name      : string,
+    quantity? : number
+}
+
+const productsCart : productsInt[] = [
+    {name: 'Cebolla', quantity: 5},
+    {name: 'Tomate', quantity: 8},
+    {name: 'Pan', quantity: 23},
+    {name: 'Lechuga'}
+]
+
 export function FirsSteps(){
     return (
         <>
             <h1>Ejercicio con ItemCounter</h1>
             <div style={bodyItemCounter}>Body del Item Counter</div> <br />
-            <ItemCounter productName="Cebolla" productQuantity={5}/>
-            <ItemCounter productName="Tomate" productQuantity={8}/>
-            <ItemCounter productName="Pan" productQuantity={23}/>
-            <ItemCounter productName="Lechuga" />
+
+            {
+                productsCart.map(
+                    ({name, quantity}) => (
+                        <ItemCounter key={name} productName={name} productQuantity={quantity}/>
+                    )
+                )
+            }
         </>
     )
 }
