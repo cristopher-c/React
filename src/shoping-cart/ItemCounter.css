@@ -1,0 +1,12 @@
+.product-row {
+  background-color: #8CEDDB;
+  padding: 7px;
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-name {
+  width: 100px;
+}
