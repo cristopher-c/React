@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MyAwesomeApp > test  evaluate snapshot 1`] = `
+<div>
+  <div
+    style="background-color: red; border-radius: 20px;"
+  >
+    Cristopher
+     Con variable.
+  </div>
+  <p>
+    Castro
+     Con variable.
+  </p>
+  <div>
+    Jeremy, Dana, Pato, Harry
+  </div>
+</div>
+`;

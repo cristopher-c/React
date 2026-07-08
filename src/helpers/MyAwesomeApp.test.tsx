@@ -1,13 +1,18 @@
-import { describe, test } from "vitest";
+import { describe, expect, test } from "vitest";
 import { MyAwesomeApp } from "../MyAwesomeApp";
 import { render, screen } from "@testing-library/react";
 
 
 describe('MyAwesomeApp', () => {
  
-  test('render name and lastname', () => {
+  test('render all container', () => {
     render(<MyAwesomeApp/>); 
-    screen.debug();    
+    screen.debug();
+  })
+  
+  test('test  evaluate snapshot', () => {
+    const {container} = render(<MyAwesomeApp/>)
+    expect(container).toMatchSnapshot();
   })
   
 })
