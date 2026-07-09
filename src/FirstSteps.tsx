@@ -20,7 +20,7 @@ const productsCart : productsInt[] = [
     {name: 'Lechuga'}
 ]
 
-export function FirsSteps(){
+export function FirstSteps(){
     return (
         <>
             <h1>Ejercicio con ItemCounter</h1>

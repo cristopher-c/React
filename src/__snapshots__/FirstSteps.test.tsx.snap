@@ -1,0 +1,28 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FirstSteps > should match snapshot 1`] = `
+<div>
+  <h1>
+    Ejercicio con ItemCounter
+  </h1>
+  <div
+    style="background-color: rgb(228, 228, 228); font-size: 20px; border-radius: 20px; padding: 15px;"
+  >
+    Body del Item Counter
+  </div>
+   
+  <br />
+  <div
+    data-testid="ItemCounter"
+  />
+  <div
+    data-testid="ItemCounter"
+  />
+  <div
+    data-testid="ItemCounter"
+  />
+  <div
+    data-testid="ItemCounter"
+  />
+</div>
+`;

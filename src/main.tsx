@@ -1,10 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { FirsSteps } from './FirstSteps'
+import { FirstSteps } from './FirstSteps'
 
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <FirsSteps/>
+    <FirstSteps/>
   </StrictMode>
 )
