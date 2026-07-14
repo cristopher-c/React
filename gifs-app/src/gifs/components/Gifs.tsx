@@ -1,8 +1,10 @@
 interface Props {
   searches : string[]
+
+  termClicked : (term:string) => void;
 }
 
-const Gifs = ({searches}:Props) => {
+const Gifs = ({searches, termClicked}:Props) => {
   return (
     <div className="previous-searches">
       <h2>Previous Searches</h2>
@@ -10,7 +12,9 @@ const Gifs = ({searches}:Props) => {
         {
           searches.map(
             (item) => (
-              <li key={item}>{item}</li>
+              <li key={item}
+                onClick={() => termClicked(item)}
+              >{item}</li>
             )
           )
         }
