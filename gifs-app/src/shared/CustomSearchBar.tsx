@@ -12,7 +12,6 @@ function CustomSearchBar({description, onSearch}:Props) {
   useEffect(()=>{
     const timeToSubmit = setTimeout(()=>{
       handleSearch();
-      console.log('de nuevo');
     }, 700)
         
     return () => {
@@ -21,8 +20,8 @@ function CustomSearchBar({description, onSearch}:Props) {
   }, [query])
 
   const handleSearch = () => {
-    if (query.trim().length <= 1) return; 
-    onSearch(query.trim());
+    if (query.trim().length < 1) return;
+    onSearch(query.trim().toLowerCase());
   }
   const handleKeyDown = (event:React.KeyboardEvent<HTMLInputElement>) => {
     if(event.keyCode === 13) handleSearch();
