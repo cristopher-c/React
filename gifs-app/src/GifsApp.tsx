@@ -18,7 +18,10 @@ export const GifsApp = () => {
       <CustomHeader title={'Find Your Gif'} />
 
       {/* Search bar */}
-      <CustomSearchBar description="Search your favorite Gif"/>
+      <CustomSearchBar 
+        description="Search your favorite Gif"
+        onSearch={handlerTerm}
+      />
 
       {/* Previous Searches */}
       <Gifs searches={PreviousSearches}
