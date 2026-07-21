@@ -8,7 +8,7 @@ import { useGifs } from "./gifs/hooks/useGifs"
 
 export const GifsApp = () => {
 
-  const {gifs,PreviousSearches,handlerTerm} = useGifs();
+  const {gifs,PreviousSearches,handlerTerm, handleTermClicked} = useGifs();
 
   return (
     <>
@@ -23,7 +23,7 @@ export const GifsApp = () => {
 
       {/* Previous Searches */}
       <Gifs searches={PreviousSearches}
-      termClicked={handlerTerm}
+      termClicked={handleTermClicked}
       />
 
       {/* GIFS */}
