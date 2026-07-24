@@ -16,7 +16,6 @@ export const useGifs = () => {
     setGifs(gifs);
 
     gifCache[term] = gifs;
-    console.log(gifCache);
   }
 
   const handleTermClicked = async (term:string) => {
