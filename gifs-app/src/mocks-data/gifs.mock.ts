@@ -3,45 +3,73 @@ import type { Gif } from "../gifs/interfaces/gif.interface";
 
 export const mockGifs: Gif[] = [
   {
-    id: '1',
-    title: "Superman's Cake",
-    url: 'https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExanVsMmowZTZrd2hjaDIwbmFjMDFka2kydmI3NWQ3MW5nNmJqbmw0dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wYyTHMm50f4Dm/giphy.gif',
+    id: 'tcKnSDeltmpKxslv8r',
+    title: 'Dragon Ball Super Broly GIF',
+    url: 'https://media0.giphy.com/media/v1.Y2lkPTczZTNjNjY1Y3I5cjk5N25jMzRwY2R2eXVhdnNtamp0cmIzaDkxNmJubWM0MzYxdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/tcKnSDeltmpKxslv8r/giphy.gif',
     width: 480,
-    height: 278,
+    height: 270
   },
   {
-    id: '2',
-    title: 'Funny Cat',
-    url: 'https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif',
-    width: 400,
-    height: 250,
+    id: 'B6SyssSlTgPXq',
+    title: 'Dragonball Goku Super Saiyan GIF',
+    url: 'https://media2.giphy.com/media/v1.Y2lkPTczZTNjNjY1Y3I5cjk5N25jMzRwY2R2eXVhdnNtamp0cmIzaDkxNmJubWM0MzYxdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/B6SyssSlTgPXq/giphy.gif',
+    width: 200,
+    height: 200
   },
   {
-    id: '3',
-    title: 'Happy BDay!',
-    url: 'https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcG40N2cyZm1iZGM2aWlhbHF1bnZmdzkxZ29idTY3ZzZkbnowNDg4OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xatKdEypHxBjzabUPV/giphy.gif',
-    width: 280,
-    height: 350,
+    id: 'xMn70dXhSnwioa0XtX',
+    title: 'Shut Up GIF',
+    url: 'https://media2.giphy.com/media/v1.Y2lkPTczZTNjNjY1Y3I5cjk5N25jMzRwY2R2eXVhdnNtamp0cmIzaDkxNmJubWM0MzYxdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/xMn70dXhSnwioa0XtX/giphy.gif',
+    width: 480,
+    height: 476
   },
   {
-    id: '4',
-    title: 'Thumbs Up',
-    url: 'https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif',
-    width: 300,
-    height: 200,
+    id: 'eJ1U3jkPwvnGTcTiRz',
+    title: 'Dragon Ball Manga Edit GIF',
+    url: 'https://media3.giphy.com/media/v1.Y2lkPTczZTNjNjY1Y3I5cjk5N25jMzRwY2R2eXVhdnNtamp0cmIzaDkxNmJubWM0MzYxdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/eJ1U3jkPwvnGTcTiRz/giphy.gif',
+    width: 360,
+    height: 480
   },
   {
-    id: '5',
-    title: 'Elmo is the best',
-    url: 'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaG5zMmVsNDFzam56bmR6azl0bmFvbHQxdDczeDNzZTdxczhtejNrNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fUQ4rhUZJYiQsas6WD/giphy.gif',
-    width: 300,
-    height: 400,
+    id: 'MO2owFzRR1UVt6v5qT',
+    title: 'Powering Up Super Dragon Ball Heroes GIF',
+    url: 'https://media3.giphy.com/media/v1.Y2lkPTczZTNjNjY1Y3I5cjk5N25jMzRwY2R2eXVhdnNtamp0cmIzaDkxNmJubWM0MzYxdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/MO2owFzRR1UVt6v5qT/giphy.gif',
+    width: 480,
+    height: 270
   },
   {
-    id: '6',
-    title: 'Messi is the best',
-    url: 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNThyZXBwbHFtdHNpYnh4ZnN0aGswcWJydXNwdnpjaXV0eXNlYXp1YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8BSJinJ8of9L0unCqW/giphy.gif',
-    width: 350,
-    height: 280,
+    id: 'I2ZSFV5GO93jLVIjJR',
+    title: 'Dragon Ball Super Broly Transformation GIF',
+    url: 'https://media3.giphy.com/media/v1.Y2lkPTczZTNjNjY1Y3I5cjk5N25jMzRwY2R2eXVhdnNtamp0cmIzaDkxNmJubWM0MzYxdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/I2ZSFV5GO93jLVIjJR/giphy.gif',
+    width: 480,
+    height: 270
   },
+  {
+    id: 'e2tSgEk1k8Baw',
+    title: 'goku GIF',
+    url: 'https://media2.giphy.com/media/v1.Y2lkPTczZTNjNjY1Y3I5cjk5N25jMzRwY2R2eXVhdnNtamp0cmIzaDkxNmJubWM0MzYxdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/e2tSgEk1k8Baw/giphy.gif',
+    width: 480,
+    height: 270
+  },
+  {
+    id: 'dmFXUZ5up1T896HP8B',
+    title: 'Dragon Ball Db GIF by BANDAI NAMCO',
+    url: 'https://media1.giphy.com/media/v1.Y2lkPTczZTNjNjY1Y3I5cjk5N25jMzRwY2R2eXVhdnNtamp0cmIzaDkxNmJubWM0MzYxdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dmFXUZ5up1T896HP8B/giphy.gif',
+    width: 573,
+    height: 321
+  },
+  {
+    id: 'BODTGPaN9Pw9mt5J1L',
+    title: 'Dragonball Daima GIF',
+    url: 'https://media2.giphy.com/media/v1.Y2lkPTczZTNjNjY1Y3I5cjk5N25jMzRwY2R2eXVhdnNtamp0cmIzaDkxNmJubWM0MzYxdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/BODTGPaN9Pw9mt5J1L/giphy.gif',
+    width: 480,
+    height: 270
+  },
+  {
+    id: 'HLt93mOi3bsz021W9k',
+    title: 'Dragon Ball Prowler GIF',
+    url: 'https://media1.giphy.com/media/v1.Y2lkPTczZTNjNjY1Y3I5cjk5N25jMzRwY2R2eXVhdnNtamp0cmIzaDkxNmJubWM0MzYxdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/HLt93mOi3bsz021W9k/giphy.gif',
+    width: 480,
+    height: 270
+  }
 ];
