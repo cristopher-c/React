@@ -26,6 +26,7 @@ export const useGifs = () => {
 
     const gifs = await GiphyRequest(term);
     setGifs(gifs);
+    gifCache[term] = gifs;
   }
   
   return {
