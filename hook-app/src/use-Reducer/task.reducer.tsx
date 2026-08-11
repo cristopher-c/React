@@ -1,3 +1,5 @@
+import * as z from "zod";
+
 interface Todo {
   id: number;
   text: string;
@@ -11,12 +13,41 @@ interface TaskState {
   pending: number
 }
 
+// ? VALIDACIÓN CON ZOD
+const TodoValidation = z.object({
+  id: z.number(),
+  text: z.string(),
+  completed: z.boolean(),
+});
+
+const TaskStateValidation = z.object({
+  todos : z.array(TodoValidation),
+  length : z.number(),
+  completed : z.number(),
+  pending : z.number(),
+});
+
 export type TaskActions = 
 {type: 'ADD_TODO'; payload: string} |
 {type: 'TOGGLE_TODO'; payload: number} |
 {type: 'DELETE_TODO'; payload: number};
 
 export const taskInitialState = ():TaskState => {
+  const localData = localStorage.getItem('task-item');
+
+  if(!localData){
+    return{
+      todos: [],
+      length: 0,
+      completed: 0,
+      pending: 0
+    };  
+  }
+  
+  const result = TaskStateValidation.safeParse(JSON.parse(localData));
+
+  if(result.success) return result.data;
+
   return{
     todos: [],
     length: 0,
