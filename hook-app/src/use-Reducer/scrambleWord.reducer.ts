@@ -119,7 +119,6 @@ export const scrambledWordState = (state: ScrambleState, action: ScrambleActions
     case 'PLAY_AGAIN' : 
       return action.payload;
     
-    
     default:
       return state;
   };
