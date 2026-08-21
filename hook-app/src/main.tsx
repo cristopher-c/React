@@ -5,7 +5,8 @@ import { createRoot } from 'react-dom/client'
 // import { TrafficLight } from './firs-useState/TrafficLigth'
 // import { TrafficLightWithEfect } from './useEffect/TrafficLigthWithEffect'
 // import { PokemonPage } from './example-poke/poke  mon-page'
-import { TasksApp } from './use-Reducer/TaskApp'
+// import { TasksApp } from './use-Reducer/TaskApp'
+import { ScrambleWords } from './use-Reducer/ScrambleWords'
 
 import './index.css'
 
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')!).render(
     {/* <TrafficLight/> */}
     {/* <TrafficLightWithEfect/> */}
     {/* <PokemonPage/> */}
-    <TasksApp/>
+    {/* <TasksApp/> */}
+    <ScrambleWords/>
   </StrictMode>,
 )
