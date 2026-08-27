@@ -8,7 +8,9 @@ import { createRoot } from 'react-dom/client'
 // import { TasksApp } from './use-Reducer/TaskApp'
 import { ScrambleWords } from './use-Reducer/ScrambleWords'
 
+
 import './index.css'
+import { InstagromApp } from './optimistic/exerciseOptimistic'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -18,5 +20,6 @@ createRoot(document.getElementById('root')!).render(
     {/* <PokemonPage/> */}
     {/* <TasksApp/> */}
     <ScrambleWords/>
+    {/* <InstagromApp/> */}
   </StrictMode>,
 )
