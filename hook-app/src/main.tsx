@@ -6,20 +6,22 @@ import { createRoot } from 'react-dom/client'
 // import { TrafficLightWithEfect } from './useEffect/TrafficLigthWithEffect'
 // import { PokemonPage } from './example-poke/poke  mon-page'
 // import { TasksApp } from './use-Reducer/TaskApp'
-import { ScrambleWords } from './use-Reducer/ScrambleWords'
+// import { ScrambleWords } from './use-Reducer/ScrambleWords'
 
+import { Toaster } from 'sonner'
 
 import './index.css'
 import { InstagromApp } from './optimistic/exerciseOptimistic'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <Toaster/>
     {/* <HooksApp/> */}
     {/* <TrafficLight/> */}
     {/* <TrafficLightWithEfect/> */}
     {/* <PokemonPage/> */}
     {/* <TasksApp/> */}
-    <ScrambleWords/>
-    {/* <InstagromApp/> */}
+    {/* <ScrambleWords/> */}
+    <InstagromApp/>
   </StrictMode>,
 )

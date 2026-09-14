@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useOptimistic, useState, useTransition } from 'react';
+import { toast } from 'sonner';
 
 interface Comment {
   id: number;
@@ -6,20 +7,47 @@ interface Comment {
   optimistic?: boolean;
 }
 
+let idComment = 2;
+
 export const InstagromApp = () => {
   const [comments, setComments] = useState<Comment[]>([
     { id: 1, text: '¡Gran foto!' },
     { id: 2, text: 'Me encanta 🧡' },
   ]);
 
+  const [loading, startTransition] = useTransition();
+
+  const [optimisticComments, dispatchOptimistic] = useOptimistic(comments, (currentComments, addComment:string) =>{
+      idComment++;
+    return [
+      ...currentComments,
+      {
+        id: idComment,
+        text: addComment,
+        optimistic: true
+      }
+    ]
+  })
+
   const handleAddComment = async (formData : FormData) => {
     const inputValue = formData.get('post-message') as string;
-    await new Promise(resolve => setTimeout(resolve, 3000));
-    setComments(prev => [...prev, {
-      id: new Date().getTime(),
-      text: inputValue
-    }])
-    console.log('Sent Comment', inputValue);
+    dispatchOptimistic(inputValue);
+    console.log('Ya se ve cambio, pero no ha recibido respuesta');
+    
+    startTransition(async ()=>{
+      await new Promise(resolve => setTimeout(resolve, 3000));
+      // idComment++;
+      // setComments(prev => [...prev, {
+      //     id: idComment,
+      //     text: inputValue
+      // }]);
+      setComments((prev) => prev);
+      toast('Upss! Algo salió mal',{
+        description:'Intente nuevamente',
+      });
+    });
+    
+    console.log(`Loading fuera del starTransition : ${loading}`);
   };
 
   return (
@@ -38,7 +66,7 @@ export const InstagromApp = () => {
 
       {/* Comentarios */}
       <ul className="flex flex-col items-start justify-center bg-gray-300 w-125 p-4">
-        {comments.map((comment) => (
+        {optimisticComments.map((comment) => (
           <li key={comment.id} className="flex items-center gap-2 mb-2">
             <div className="bg-blue-500 rounded-full w-10 h-10 flex items-center justify-center">
               <span className="text-white text-center">A</span>
@@ -65,7 +93,7 @@ export const InstagromApp = () => {
         />
         <button
           type="submit"
-          disabled={false}
+          disabled={loading}
           className="bg-blue-500 text-white p-2 rounded-md w-full"
         >
           Enviar
