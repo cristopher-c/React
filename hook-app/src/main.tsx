@@ -10,10 +10,14 @@ import { Toaster } from 'sonner'
 // import { TasksApp } from './use-Reducer/TaskApp'
 // import { ScrambleWords } from './use-Reducer/ScrambleWords'
 // import { InstagromApp } from './optimistic/exerciseOptimistic'
-import { ClientInformation } from './use-suspense/ClientInformation'
+// import { ClientInformation } from './use-suspense/ClientInformation'
+// import { getUserAction } from './use-suspense/api/get-user.action'
 
 import './index.css'
-import { getUserAction } from './use-suspense/api/get-user.action'
+import { PruebaUseContext } from './useContext/pruebaUseContext';
+
+
+
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -25,12 +29,13 @@ createRoot(document.getElementById('root')!).render(
     {/* <TasksApp/> */}
     {/* <ScrambleWords/> */}
     {/* <InstagromApp/> */}
-    <Suspense fallback={
+    {/* <Suspense fallback={
       <div className="bg-gradient">
         <h1 className='text-4xl text-white'>Loading...</h1>
       </div>
     }>
       <ClientInformation getUserById={getUserAction(99)}/>
-    </Suspense>
+    </Suspense> */}
+    <PruebaUseContext/>
   </StrictMode>,
 )
