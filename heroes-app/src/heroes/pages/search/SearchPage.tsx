@@ -1,8 +1,17 @@
-import React from 'react'
+import { CustomHeader } from '@/heroes/shared/CustomHeader';
+import { CustomStats } from '@/heroes/shared/CustomStats';
+import { FilterControls } from './components/FilterControls';
 
 export const SearchPage = () => {
   return (
-    <div>SearchPage</div>
+    <>
+      <CustomHeader title="Heroes Search Page" description="Selecciona tu super heroe favorito y customizalo"/>
+
+      <CustomStats/>
+
+      {/* Controls */}
+      <FilterControls/>
+    </>
   )
 }
 

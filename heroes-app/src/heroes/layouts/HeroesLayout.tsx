@@ -1,25 +1,15 @@
-import { Link, Outlet } from "react-router"
+import { Outlet } from "react-router"
 
 export const HeroesLayout = () => {
   return (
-    <div className="bg-blue-400">
-      <div className="bg-white">
-        <ul>
-          <li>
-            <Link to='/'>HomePage</Link>
-          </li>
-          <li>
-            <Link to='/hero/1'>Hero # 1</Link>
-          </li>
-          <li>
-            <Link to='/search'>SearchPage</Link>
-          </li>
-          <li>
-            <Link to='/admin'>Admin</Link>
-          </li>
-        </ul>
-      </div>
+    <div className="min-h-screen bg-linear-to-br from-slate-50 via-blue-50 to-purple-50">
+      <div className="max-w-7xl mx-auto p-6">
+
       <Outlet/>
+
+      </div>
     </div>
+      
+    
   )
 }
